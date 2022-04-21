@@ -2,16 +2,15 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.BeforeMethod;
-import pages.BasePage;
-import pages.LoginPage;
-import pages.NewProjectPage;
-import pages.ProjectListPage;
+import pages.*;
+
 
 public class BaseTest {
     BasePage basePage;
     LoginPage loginPage;
     ProjectListPage projectListPage;
     NewProjectPage newProjectPage;
+    RepositoryPage repositoryPage;
 
     @BeforeMethod
     public void setUp() {
@@ -25,6 +24,8 @@ public class BaseTest {
         loginPage = new LoginPage();
         projectListPage = new ProjectListPage();
         newProjectPage = new NewProjectPage();
+        repositoryPage = new RepositoryPage();
+
     }
 }
 
